@@ -51,10 +51,14 @@ The methods are working on URL address - get the HTML content from the URL addre
 file system, and extract the URLs from the HTML content.
 
 ### TODO's:
-1. Performance: using concurrent.futures
+1. Performance: using concurrent.futures correctly
 2. testing
 3. Features: using BeautifulSoup library for more features
 4. logging (instead of printing)
 5. using DB for the file saving format ("unlock" the ability to filter duplicate data and store more meta-data in general)
 6. using better API
 7. Zip the files to save space
+
+For performance:
+I tried using futures to iterate over some URLs at the same time, it costs more time and CPU than the current code.
+ChatGPT recommended using cProfile to debug this.
